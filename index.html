@@ -27,7 +27,20 @@
   <h1>Welcome to Analytics Practice Site</h1>
   <p>This site is used for Google Analytics practice.</p>
 
-  <button id="buyBtn">Buy Now</button>
+  <button onclick="trackViewProducts()">
+  View Products
+</button>
+
+<script>
+function trackViewProducts() {
+  gtag('event', 'view_products', {
+    event_category: 'engagement',
+    event_label: 'View Products Button'
+  });
+  window.location.href = 'products.html';
+}
+</script>
+
 
 </body>
 </html>
