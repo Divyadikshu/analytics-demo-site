@@ -25,9 +25,20 @@
 
 <h1>Our Products</h1>
 
-<button onclick="location.href='pricing.html'">
+<button onclick="trackCheckPricing()">
   Check Pricing
 </button>
+
+<script>
+function trackCheckPricing() {
+  gtag('event', 'check_pricing', {
+    event_category: 'engagement',
+    event_label: 'Pricing Button'
+  });
+  window.location.href = 'pricing.html';
+}
+</script>
+
 
 </body>
 </html>
