@@ -26,9 +26,20 @@
 <h1>Pricing Plans</h1>
 <p>Choose a plan</p>
 
-<a href="contact.html">
-  <button>Contact Sales</button>
-</a>
+<button onclick="trackContactSales()">
+  Contact Sales
+</button>
+
+<script>
+function trackContactSales() {
+  gtag('event', 'contact_sales', {
+    event_category: 'lead',
+    event_label: 'Contact Sales Button'
+  });
+  window.location.href = 'contact.html';
+}
+</script>
+
 
 </body>
 </html>
