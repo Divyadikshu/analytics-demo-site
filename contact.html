@@ -25,7 +25,8 @@
 
 <h1>Contact Us</h1>
 
-<form action="thankyou.html">
+<form onsubmit="trackFormSubmit()" action="thankyou.html">
+
   <label>Name:</label><br>
   <input type="text"><br><br>
 
@@ -34,6 +35,15 @@
 
   <button type="submit">Submit</button>
 </form>
+  <script>
+function trackFormSubmit() {
+  gtag('event', 'form_submit', {
+    event_category: 'lead',
+    event_label: 'Contact Form'
+  });
+}
+</script>
+
 
 </body>
 </html>
